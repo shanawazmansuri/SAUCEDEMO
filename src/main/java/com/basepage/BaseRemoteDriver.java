@@ -38,6 +38,7 @@ public class BaseRemoteDriver {
 
 
     // Set up driver (local or remote)
+
     public static void browser(String browser, String url) throws MalformedURLException {
         String runMode = System.getProperty("mode", "local"); // local or docker
 
@@ -75,13 +76,13 @@ public class BaseRemoteDriver {
     }
 
 
-
+    @Parameters("browser")
     @BeforeTest
-    public BaseRemoteDriver setUp() throws MalformedURLException {
+    public BaseRemoteDriver setUp(String browser) throws MalformedURLException {
         PropFile pro = new PropFile();
         String className = this.getClass().getSimpleName();
         ExtentReportConf.reportSetUp(className);
-        browser(pro.prop.getProperty("browser"), (pro.prop.getProperty("url")));
+        browser(browser, (pro.prop.getProperty("url")));
         ExtentReportConf.reportInfoLog("Opened Browser Successfully");
         maximizeBrowser();
         ExtentReportConf.reportInfoLog("Maximized the Browser");

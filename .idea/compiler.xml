@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HIVE_LEARNING" />
+        <module name="SAUCELABS" />
       </profile>
     </annotationProcessing>
   </component>
