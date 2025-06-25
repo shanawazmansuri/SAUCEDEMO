@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="D:/Codes/HIVE_LEARNING/src/test/java/com/tests/AddingProductToCartTest.java">
+        <classes>
+            <class name="com.tests.SauceLoginTest">
+            </class>
+            <class name="com.tests.AddingProductToCartTest">
+            </class>
+        </classes>
+    </test>
+</suite>
