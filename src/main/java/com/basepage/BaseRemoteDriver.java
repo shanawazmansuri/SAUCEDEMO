@@ -8,6 +8,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -57,7 +58,9 @@ public class BaseRemoteDriver {
                 driver.set(new ChromeDriver(options));
             } else if (browser.equalsIgnoreCase("firefox")) {
                 WebDriverManager.firefoxdriver().setup();
-                driver.set(new FirefoxDriver());
+                FirefoxOptions options = new FirefoxOptions();
+                options.setHeadless(true);
+                driver.set(new FirefoxDriver(options));
             }
         }
 
