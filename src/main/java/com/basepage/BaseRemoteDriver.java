@@ -53,6 +53,7 @@ public class BaseRemoteDriver {
 
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
+                options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
                 driver.set(new ChromeDriver(options));
             } else if (browser.equalsIgnoreCase("firefox")) {
                 WebDriverManager.firefoxdriver().setup();
