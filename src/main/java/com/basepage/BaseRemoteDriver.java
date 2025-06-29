@@ -54,7 +54,7 @@ public class BaseRemoteDriver {
 
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
-                //options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+                options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
                 options.addArguments("--incognito");
 
                 driver.set(new ChromeDriver(options));
