@@ -5,18 +5,15 @@
           name="LoginTest">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.tests.SauceLoginTest">
-            </class>
+            <class name="com.tests.SauceLoginTest"/>
         </classes>
     </test>
     <test verbose="2" preserve-order="true"
           name="End2EndTest">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.tests.SauceLoginTest">
-            </class>
-            <class name="com.tests.AddingProductToCartTest">
-            </class>
+            <class name="com.tests.SauceLoginTest"/>
+            <class name="com.tests.AddingProductToCartTest"/>
         </classes>
     </test>
 </suite>
