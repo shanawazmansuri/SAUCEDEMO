@@ -2,16 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel="tests" thread-count="2">
     <test verbose="2" preserve-order="true"
-          name="LoginTest">
+          name="ChromeTest">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.tests.SauceLoginTest">
             </class>
+            <class name="com.tests.AddingProductToCartTest">
+            </class>
         </classes>
     </test>
     <test verbose="2" preserve-order="true"
-          name="End2EndTest">
-        <parameter name="browser" value="chrome"/>
+          name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="com.tests.SauceLoginTest">
             </class>
